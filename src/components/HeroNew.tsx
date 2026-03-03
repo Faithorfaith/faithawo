@@ -594,14 +594,8 @@ export function HeroNew() {
               <BookCard key={project.id} project={project} onClick={() => setSelectedProject(project)} />
             ))}
           </div>
-          {projects.length > 4 && (
-            <a
-              href="/work"
-              className="mt-5 flex items-center justify-center w-full py-3 rounded-full border border-[rgba(0,0,0,0.15)] bg-white font-['Gloria_Hallelujah',sans-serif] text-[16px] text-[#272727] hover:bg-gray-50 transition-colors"
-            >
-              View all works
-            </a>
-          )}
+          {projects.length > 8 &&
+          }
         </div>
 
         {/* Playground CTA */}
