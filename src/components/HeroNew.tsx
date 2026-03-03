@@ -435,7 +435,13 @@ export function HeroNew() {
               <div key={social.id} className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start]">
                 <div className="col-1 h-[48px] ml-px mt-[11px] rounded-[500px] row-1 px-[20px] py-[8px]" style={{ backgroundColor: '#8e8e8e', width: 'auto' }} />
                 <a
-                  href={social.url}
+                  href={
+                    social.url?.startsWith('http')
+                    ? social.url
+                    : social.url
+                  ? `https://${social.url}`
+                    : '#'
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="col-1 content-stretch flex items-center justify-center ml-0 mt-0 px-[20px] py-[8px] rounded-[500px] row-1 cursor-pointer transition-opacity hover:opacity-80"
