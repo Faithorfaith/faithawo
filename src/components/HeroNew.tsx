@@ -594,7 +594,7 @@ export function HeroNew() {
               <BookCard key={project.id} project={project} onClick={() => setSelectedProject(project)} />
             ))}
           </div>
-          {projects.length > 8 &&
+          {projects.length > 8
           }
         </div>
 
