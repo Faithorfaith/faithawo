@@ -415,6 +415,12 @@ export function Admin() {
                         onChange={v => {
                           const socialLinks = [...formData.socialLinks];
                           socialLinks[index].url = v;
+                          const fixed = v.trim();
+                          socialLinks[index].url = fixed.startsWith('http')
+                            ? fixed
+                            : fixed
+                            ? `https://${fixed}`
+                            : '';
                           setFormData({ ...formData, socialLinks });
                         }}
                       />
